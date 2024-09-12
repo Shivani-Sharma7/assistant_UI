@@ -67,7 +67,7 @@
                     messageContainer.append(sendElement);
                     let button=document.querySelector("#submit_button");
                     button.disabled=true;
-                    const response = await axios.post('http://localhost:3000/text_generation',{message: this.promptMessage});
+                    const response = await axios.post('https://assistant-api-1.onrender.com/text_generation',{message: this.promptMessage});
                     const receiveElement=document.createElement('div');
                     receiveElement.innerText=response.data;
                     receiveElement.classList.add('message_receive');
